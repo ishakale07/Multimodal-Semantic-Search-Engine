@@ -10,7 +10,7 @@ A modern, "Zero-Shot" Multimodal Search Engine that allows you to search across 
 
 ---
 
-## 🏗 System Requirements
+##  System Requirements
 
 To run this application effectively, your system should meet the following requirements:
 
@@ -29,7 +29,7 @@ sudo apt install ffmpeg libsm6 libxext6 -y
 
 ---
 
-## 🚀 Setup & Installation
+##  Setup & Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🗄️ Data Preparation (Crucial Step)
+##  Data Preparation (Crucial Step)
 
 **Note:** To keep the repository lightweight, no datasets or vector indices are included. You must provide your own media and build the indices before running the server.
 
@@ -84,7 +84,7 @@ python src/split_index.py
 
 ---
 
-## 🖥 Running the Server
+##  Running the Server
 
 Once your indices are built, you can start the FastAPI server.
 
@@ -102,7 +102,7 @@ nohup venv/bin/uvicorn server:app --host 0.0.0.0 --port 8000 > server.log 2>&1 &
 
 ---
 
-## 🧠 Technical Architecture
+##  Technical Architecture
 
 1. **The Brain (`src/model.py`)**: A unified architecture utilizing **CLIP (ViT-B/32)** for text, image, and video frames, and **Whisper (tiny)** for audio. All outputs are padded/normalized to a 512-dimensional vector space.
 2. **The Database (`faiss`)**: Facebook AI Similarity Search is used to quickly find the nearest neighbors in the 512-dim space.
